@@ -1,0 +1,297 @@
+section:after, .tweener:after, section .info-block:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+section a, section:hover > div {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+section a:hover, section:hover > div:hover {
+  -moz-transition-duration: 0.1s;
+  -o-transition-duration: 0.1s;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+}
+
+html {
+  color: #666;
+}
+
+h1 {
+  color: #333;
+  padding: 2rem;
+  margin: 0;
+  text-align: center;
+  font-weight: normal;
+}
+
+h2 {
+  color: #444;
+  margin-top: 0;
+}
+
+p {
+  line-height: 1.8;
+}
+
+li:after {
+  background: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.5);
+  content: "Nick Anderson - flic.kr/ps/QG591";
+  padding: .5rem 1rem .5rem .5rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
+  font-size: 10px;
+}
+
+/* https://stackoverflow.com/questions/20150621/sass-mixin-for-animation-keyframe-which-includes-multiple-stages-and-transform-p/23861638#23861638
+animation mixing
+keyframe animation
+@include animation('animation-name .4s 1')*/
+html {
+  background: white;
+  padding: 1rem;
+  font-family: sans-serif;
+}
+
+section {
+  background: white;
+  max-width: 1024px;
+  margin: auto;
+  /* The Holy Grail of CSS Centering - http://webdesign.tutsplus.com/tutorials/the-holy-grail-of-css-centering--cms-22114 */
+}
+section a {
+  color: #666;
+  text-decoration: none;
+  padding: 1rem;
+  border: 1px solid;
+  float: left;
+}
+section a:hover {
+  background: #111;
+  border-color: transparent;
+  color: white;
+  opacity: .75;
+}
+section img {
+  width: 100%;
+}
+section p {
+  margin-top: 0;
+  text-align: left;
+}
+section .contained {
+  height: 70%;
+  margin: auto;
+  width: 100%;
+}
+section .outer {
+  display: table;
+  height: 100%;
+  width: 100%;
+  word-spacing: -1rem;
+}
+section .inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+section .centered {
+  display: inline-block;
+  float: left;
+  position: relative;
+  width: 100%;
+}
+section:hover > div {
+  opacity: .5;
+}
+section:hover > div:hover {
+  opacity: 1;
+}
+
+/* The "Tweener" ... My addition to allow for cross-browser support of alternating element alignment of non-css-class-ified elements*/
+.tweener {
+  direction: ltr;
+  display: inline-table;
+  height: auto;
+  width: 50%;
+  word-spacing: normal;
+}
+.tweener .inner {
+  width: 100% !important;
+}
+
+/*.tweener:nth-of-type(odd) .centered > * {
+  @include box-shadow(0 5px 1px -3px rgba(0,0,0,.2));
+}*/
+.text-block {
+  width: 80%;
+  float: right;
+}
+
+.tweener {
+  height: 100%;
+  vertical-align: middle;
+  width: 50%;
+}
+
+section .info-block {
+  border-bottom: 1px solid #ccc;
+  padding: 4rem 0;
+}
+section .info-block:last-of-type {
+  border: none;
+}
+section .info-block:nth-child(2n) .outer {
+  direction: rtl;
+}
+section .info-block:nth-child(2n) .text-block {
+  float: left;
+}
+
+.video-container {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  position: relative;
+}
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  border: none;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+@-webkit-keyframes xfade {
+  25% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes xfade {
+  25% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 0;
+  }
+}
+@-o-keyframes xfade {
+  25% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 0;
+  }
+}
+@keyframes xfade {
+  25% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 0;
+  }
+}
+section ul.xfade {
+  float: right;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 66.69922%;
+  position: relative;
+  width: 100%;
+}
+section ul.xfade li {
+  margin: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+section ul.xfade li:nth-child(3) {
+  -webkit-animation: xfade 12s 0s infinite;
+  -moz-animation: xfade 12s 0s infinite;
+  -o-animation: xfade 12s 0s infinite;
+  animation: xfade 12s 0s infinite;
+}
+section ul.xfade li:nth-child(2) {
+  -webkit-animation: xfade 12s 4s infinite;
+  -moz-animation: xfade 12s 4s infinite;
+  -o-animation: xfade 12s 4s infinite;
+  animation: xfade 12s 4s infinite;
+}
+section ul.xfade li:nth-child(1) {
+  -webkit-animation: xfade 12s 8s infinite;
+  -moz-animation: xfade 12s 8s infinite;
+  -o-animation: xfade 12s 8s infinite;
+  animation: xfade 12s 8s infinite;
+}
+
+section .info-block:nth-child(3n+2) ul.xfade li:nth-child(3) {
+  -webkit-animation: xfade 12s -1s infinite;
+  -moz-animation: xfade 12s -1s infinite;
+  -o-animation: xfade 12s -1s infinite;
+  animation: xfade 12s -1s infinite;
+}
+section .info-block:nth-child(3n+2) ul.xfade li:nth-child(2) {
+  -webkit-animation: xfade 12s 3s infinite;
+  -moz-animation: xfade 12s 3s infinite;
+  -o-animation: xfade 12s 3s infinite;
+  animation: xfade 12s 3s infinite;
+}
+section .info-block:nth-child(3n+2) ul.xfade li:nth-child(1) {
+  -webkit-animation: xfade 12s 7s infinite;
+  -moz-animation: xfade 12s 7s infinite;
+  -o-animation: xfade 12s 7s infinite;
+  animation: xfade 12s 7s infinite;
+}
+
+section .info-block:nth-child(3n+3) ul.xfade li:nth-child(3) {
+  -webkit-animation: xfade 12s -2s infinite;
+  -moz-animation: xfade 12s -2s infinite;
+  -o-animation: xfade 12s -2s infinite;
+  animation: xfade 12s -2s infinite;
+}
+section .info-block:nth-child(3n+3) ul.xfade li:nth-child(2) {
+  -webkit-animation: xfade 12s 2s infinite;
+  -moz-animation: xfade 12s 2s infinite;
+  -o-animation: xfade 12s 2s infinite;
+  animation: xfade 12s 2s infinite;
+}
+section .info-block:nth-child(3n+3) ul.xfade li:nth-child(1) {
+  -webkit-animation: xfade 12s 6s infinite;
+  -moz-animation: xfade 12s 6s infinite;
+  -o-animation: xfade 12s 6s infinite;
+  animation: xfade 12s 6s infinite;
+}

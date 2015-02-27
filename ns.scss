@@ -1,0 +1,300 @@
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+%hover-transition {
+  @include transition-property(all);
+  @include transition-duration(.5s);
+  @include transition-timing-function(ease-out); 
+
+  &:hover {
+    @include transition-duration(0.1s);
+  }
+}
+
+html {
+  color: #666;
+}
+
+h1 {
+  color: #333;
+  padding: 2rem;
+  margin: 0;
+  text-align: center;
+  font-weight: normal;
+}
+
+h2 {
+  color: #444;
+  margin-top: 0;
+}
+
+p {
+  line-height: 1.8;
+}
+
+// Photo Credit
+li:after {
+  background: rgba(0,0,0,.5);
+  color: rgba(255,255,255,.5);
+  content: "Nick Anderson - flic.kr/ps/QG591";
+  padding: .5rem 1rem .5rem .5rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
+  font-size: 10px;
+}
+
+/* https://stackoverflow.com/questions/20150621/sass-mixin-for-animation-keyframe-which-includes-multiple-stages-and-transform-p/23861638#23861638
+animation mixing
+keyframe animation
+@include animation('animation-name .4s 1')*/
+
+@mixin animation($animate...) {
+$max: length($animate);
+$animations: '';
+
+@for $i from 1 through $max {
+    $animations: #{$animations + nth($animate, $i)};
+
+    @if $i < $max {
+        $animations: #{$animations + ", "};
+    }
+}
+-webkit-animation: $animations;
+-moz-animation:    $animations;
+-o-animation:      $animations;
+animation:         $animations;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        $browser: '-webkit-'; @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        $browser: '-moz-'; @content;
+    }
+    @-o-keyframes #{$animationName} {
+        $browser: '-o-'; @content;
+    }
+    @keyframes #{$animationName} {
+        $browser: ''; @content;
+    }
+} $browser: null;
+
+html {
+  background: white;
+  padding: 1rem;
+  font-family: sans-serif;
+}
+
+section {
+  background: white;
+  @extend %clearfix;
+  max-width: 1024px;
+  margin: auto;
+  
+  a {
+    color: #666;
+    text-decoration: none;
+    padding: 1rem;
+    border: 1px solid;
+    float: left;
+    @extend %hover-transition;
+    
+    &:hover {
+      background: #111;
+      border-color: transparent;
+      color: white;
+      opacity: .75;
+    }
+  }
+  
+  img {
+    width: 100%;
+  }
+  
+  p {
+    margin-top: 0;
+    text-align: left;
+  }
+ /* The Holy Grail of CSS Centering - http://webdesign.tutsplus.com/tutorials/the-holy-grail-of-css-centering--cms-22114 */
+  .contained {
+    height: 70%;
+    margin: auto;
+    width: 100%;
+  }
+
+  .outer {
+    display: table;
+    height: 100%;
+    width: 100%;
+    word-spacing: -1rem;
+  }
+  
+  .inner {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  .centered {
+    display: inline-block;
+    float: left;
+    position: relative;
+    width: 100%;
+  }
+  
+  &:hover {
+    > div {
+      opacity: .5;
+      @extend %hover-transition;
+      
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+/* The "Tweener" ... My addition to allow for cross-browser support of alternating element alignment of non-css-class-ified elements*/
+
+.tweener {
+  @extend %clearfix;
+  direction: ltr;
+  display: inline-table;
+  height: auto;
+  width: 50%;
+  word-spacing: normal;
+  
+  .inner {
+    width: 100% !important;
+  }
+}
+
+// A subtle drop shadow for your images and videos if you'd like.
+/*.tweener:nth-of-type(odd) .centered > * {
+  @include box-shadow(0 5px 1px -3px rgba(0,0,0,.2));
+}*/
+
+
+.text-block {
+  width: 80%;
+  float: right;
+}
+
+.tweener {
+  height: 100%;
+  vertical-align: middle;
+  width: 50%;
+}
+
+section .info-block {
+  border-bottom: 1px solid #ccc;
+  @extend %clearfix;
+  padding: 4rem 0;
+  
+  &:last-of-type {
+    border: none;
+  }
+
+  &:nth-child(2n) {
+    .outer {
+      direction: rtl;
+    }
+    
+    .text-block {
+      float: left;
+    }
+  }
+}
+
+// Smashing Magazine article describing how to make iframes responsive - http://www.smashingmagazine.com/2014/02/27/making-embedded-content-work-in-responsive-design/
+
+.video-container {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  position: relative;
+ 
+  iframe, 
+  object, 
+  embed {
+    border: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+@include keyframes('xfade') {
+  25% { #{$browser}opacity: 1; }
+  33% { #{$browser}opacity: 0; }
+  92% { #{$browser}opacity: 0; }
+}
+
+section ul.xfade {
+  float: right;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 683/1024 * 100%; // the images' height to width ratio multiplied by whatever you want the width to be. 
+  position: relative;
+  width: 100%; 
+  
+  li {
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  li:nth-child(3) {
+    @include animation('xfade 12s 0s infinite');
+  }
+
+  li:nth-child(2) {
+    @include animation('xfade 12s 4s infinite');
+  }
+
+  li:nth-child(1) {
+    @include animation('xfade 12s 8s infinite');
+  }
+}
+
+section .info-block:nth-child(3n+2) ul.xfade {
+  
+  li:nth-child(3) {
+    @include animation('xfade 12s -1s infinite');
+  }
+
+  li:nth-child(2) {
+    @include animation('xfade 12s 3s infinite');
+  }
+
+  li:nth-child(1) {
+    @include animation('xfade 12s 7s infinite');
+  }
+}
+
+section .info-block:nth-child(3n+3) ul.xfade {
+  
+  li:nth-child(3) {
+    @include animation('xfade 12s -2s infinite');
+  }
+
+  li:nth-child(2) {
+    @include animation('xfade 12s 2s infinite');
+  }
+
+  li:nth-child(1) {
+    @include animation('xfade 12s 6s infinite');
+  }
+}
