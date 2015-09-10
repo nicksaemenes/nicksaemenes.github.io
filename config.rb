@@ -56,3 +56,9 @@ relative_assets = true
 #   scss may not have changed, since we want the CSS to be compressed and have
 #   the debug info removed.
 sass_options = (environment == :development) ? {:debug_info => true} : {:always_update => true}
+
+module Sass::Script::Functions
+    def timestamp()
+        return Sass::Script::String.new(Time.now.to_s)
+    end
+end
