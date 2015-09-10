@@ -1,3 +1,5 @@
+@import 'compass';
+
 %clearfix {
   &:after {
     content: "";
@@ -9,7 +11,7 @@
 %hover-transition {
   @include transition-property(all);
   @include transition-duration(.5s);
-  @include transition-timing-function(ease-out); 
+  @include transition-timing-function(ease-out);
 
   &:hover {
     @include transition-duration(0.1s);
@@ -35,6 +37,11 @@ h2 {
 
 p {
   line-height: 1.8;
+}
+
+img.logo {
+  margin: 0 auto;
+  width: 10rem;
 }
 
 // Photo Credit
@@ -97,7 +104,7 @@ section {
   @extend %clearfix;
   max-width: 1024px;
   margin: auto;
-  
+
   a {
     color: #666;
     text-decoration: none;
@@ -105,7 +112,7 @@ section {
     border: 1px solid;
     float: left;
     @extend %hover-transition;
-    
+
     &:hover {
       background: #111;
       border-color: transparent;
@@ -113,11 +120,11 @@ section {
       opacity: .75;
     }
   }
-  
+
   img {
     width: 100%;
   }
-  
+
   p {
     margin-top: 0;
     text-align: left;
@@ -135,24 +142,24 @@ section {
     width: 100%;
     word-spacing: -1rem;
   }
-  
+
   .inner {
     display: table-cell;
     vertical-align: middle;
   }
-  
+
   .centered {
     display: inline-block;
     float: left;
     position: relative;
     width: 100%;
   }
-  
+
   &:hover {
     > div {
       opacity: .5;
       @extend %hover-transition;
-      
+
       &:hover {
         opacity: 1;
       }
@@ -169,7 +176,7 @@ section {
   height: auto;
   width: 50%;
   word-spacing: normal;
-  
+
   .inner {
     width: 100% !important;
   }
@@ -196,7 +203,7 @@ section .info-block {
   border-bottom: 1px solid #ccc;
   @extend %clearfix;
   padding: 4rem 0;
-  
+
   &:last-of-type {
     border: none;
   }
@@ -205,7 +212,7 @@ section .info-block {
     .outer {
       direction: rtl;
     }
-    
+
     .text-block {
       float: left;
     }
@@ -220,9 +227,9 @@ section .info-block {
   padding-bottom: 56.25%;
   padding-top: 30px;
   position: relative;
- 
-  iframe, 
-  object, 
+
+  iframe,
+  object,
   embed {
     border: none;
     height: 100%;
@@ -244,10 +251,10 @@ section ul.xfade {
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-top: 683/1024 * 100%; // the images' height to width ratio multiplied by whatever you want the width to be. 
+  padding-top: 683/1024 * 100%; // the images' height to width ratio multiplied by whatever you want the width to be.
   position: relative;
-  width: 100%; 
-  
+  width: 100%;
+
   li {
     margin: 0;
     position: absolute;
@@ -270,7 +277,7 @@ section ul.xfade {
 }
 
 section .info-block:nth-child(3n+2) ul.xfade {
-  
+
   li:nth-child(3) {
     @include animation('xfade 12s -1s infinite');
   }
@@ -285,7 +292,7 @@ section .info-block:nth-child(3n+2) ul.xfade {
 }
 
 section .info-block:nth-child(3n+3) ul.xfade {
-  
+
   li:nth-child(3) {
     @include animation('xfade 12s -2s infinite');
   }
