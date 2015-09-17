@@ -5,17 +5,28 @@
   <meta charset="utf-8">
 
   <title>Nick Saemenes</title>
+  <link href='https://fonts.googleapis.com/css?family=Hind:400,300,500,600,700' rel='stylesheet' type='text/css'>
   <link type="text/css" rel="stylesheet" href="css/ns.css" media="all" />
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
   <![endif]-->
 </head>
 
+<header>
+  <div id="ns-logo">
+    <img src="images/ns-logo.svg" alt="N S logo">
+  </div>
+</header>
+
 <!-- TODO: include links to examples of where and how I have implemented these techniques. -->
 
-<img class="logo" src="images/ns-logo.svg" alt="N S logo">
-<h1>Some techniques I've picked up and put together.</h1>
+<p class="headline">Some techniques I've picked up and put together.</p>
 <section>
   <div class="contained info-block">
     <div class="outer">
@@ -34,7 +45,7 @@
         <div class="inner">
           <div class="centered">
             <div class="text-block">
-              <h2>Vertical Centering</h2>
+              <h1>Vertical Centering</h1>
               <p>Use any amount of text and any size photo. </p>
               <p>If you shrink the window width you'll see that when the image height is smaller than the text height, the two elements will remain vertically centered with each other. </p>
               <p>This is a modified version of ... </p>
@@ -64,7 +75,7 @@
         <div class="inner">
           <div class="centered">
             <div class="text-block">
-              <h2>Alternating Alignment of Elements</h2>
+              <h1>Alternating Alignment of Elements</h1>
               <p>The HTML structure per row is consistent - image then text.</p>
               <p>Typically, you can accomplish the alternating alignment of elements with floats, but in this case, floating elements removes their ability to be vertically centered - Boo! </p>
               <p>Thus, I employed some ol' RTL trickery. I had to include one additional div (with the "tweener" class) to make this happen, but in the end I think it is worth it. Especially since it works in all modern browers.</p>
@@ -93,7 +104,7 @@
         <div class="inner">
           <div class="centered">
             <div class="text-block">
-              <h2>Pure CSS Image Rotator</h2>
+              <h1>Pure CSS Image Rotator</h1>
               <p>I snagged the initial code from Mark Lee, then made it work for me.</p>
               <p>NOTE: If you use the CSS image rotator you'll want to make sure that your photos (of the same group) use the same aspect ratios.</p>
               <a href="http://codepen.io/leemark/pen/DvliI">Mark's Pen</a>
@@ -120,7 +131,7 @@
         <div class="inner">
           <div class="centered">
             <div class="text-block">
-              <h2>Responsive Embedded Video</h2>
+              <h1>Responsive Embedded Video</h1>
               <p>First off, both Kilian Martin and Brett Novak are incredible at what they do. Much respect.</p>
               <p>Lifted from the Smashing Magazine article describing how to make iframes responsive</p>
               <a href="http://www.smashingmagazine.com/2014/02/27/making-embedded-content-work-in-responsive-design/">Smashing Article</a>
@@ -149,7 +160,7 @@
         <div class="inner">
           <div class="centered">
             <div class="text-block">
-              <h2>Different Transitions for Hover On / Hover Off</h2>
+              <h1>Different Transitions for Hover On / Hover Off</h1>
               <p>A subtle, but classy way to add that extra shine to your site is to use different transitions for hover on vs. hover off. The links in this demo have a transition duration of .1s for the hover on, but .5s for the hover off. You have to be careful with this as it can be an unexpected behavior that leads to the impression that something isn't working correctly, but I believe that misperception can only be fought with good design decisions and time. </p>
               <p>Also, if you don't know of Chris Coyier, you have either been living under a rock or you are not a web designer. </p>
               <a href="http://css-tricks.com/different-transitions-for-hover-on-hover-off/">CSS-Tricks Article</a>

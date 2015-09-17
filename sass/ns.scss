@@ -1,4 +1,13 @@
 @import 'compass';
+@import 'css-reset';
+
+html {
+  @include box-sizing(border-box);
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 %clearfix {
   &:after {
@@ -20,29 +29,166 @@
 
 html {
   color: #666;
+  font-family: 'Hind', sans-serif;
+  font-weight: 300;
+}
+
+$earmarks-size: 20px;
+
+body {
+  // background-color: #333;
+  padding-top: 100px;
+
+  &:after,
+  &:before {
+  	width: 0;
+  	height: 0;
+    position: fixed;
+    content: "";
+  }
+
+  &:after {
+  	border-bottom: $earmarks-size solid black;
+    border-right: $earmarks-size solid transparent;
+    left: 0;
+    bottom: 0;
+  }
+
+  &:before {
+  	border-top: $earmarks-size solid black;
+    border-left: $earmarks-size solid transparent;
+    right: 0;
+    top: 0;
+    z-index: 1001;
+  }
+}
+
+.headline {
+  padding: 2rem;
+  text-align: center;
 }
 
 h1 {
   color: #333;
-  padding: 2rem;
-  margin: 0;
-  text-align: center;
-  font-weight: normal;
+  font-weight: 700;
 }
 
 h2 {
   color: #444;
-  margin-top: 0;
+  font-weight: 600;
+}
+
+h3 {
+  color: #555;
+  font-weight: 500;
 }
 
 p {
   line-height: 1.8;
 }
 
-img.logo {
-  display: block;
-  margin: 0 auto;
-  max-width: 3rem;
+
+// Change the color of SVG when using it as a background-image
+// credit: http://stackoverflow.com/a/30963762/1519097
+
+// choose a color
+
+$icon-color: #FFF;
+
+
+// functions to urlencode the svg string
+
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+  @return $string;
+}
+
+@function url-encode($string) {
+  $map: (
+    "%": "%25",
+    "<": "%3C",
+    ">": "%3E",
+    " ": "%20",
+    "!": "%21",
+    "*": "%2A",
+    "'": "%27",
+    '"': "%22",
+    "(": "%28",
+    ")": "%29",
+    ";": "%3B",
+    ":": "%3A",
+    "@": "%40",
+    "&": "%26",
+    "=": "%3D",
+    "+": "%2B",
+    "$": "%24",
+    ",": "%2C",
+    "/": "%2F",
+    "?": "%3F",
+    "#": "%23",
+    "[": "%5B",
+    "]": "%5D"
+  );
+  $new: $string;
+  @each $search, $replace in $map {
+    $new: str-replace($new, $search, $replace);
+  }
+  @return $new;
+}
+
+@function inline-svg($string) {
+  @return url('data:image/svg+xml;charset=US-ASCII,#{url-encode($string)}');
+}
+
+
+// icon styles
+// note the fill="' + $icon-color + '"
+
+%logo-as-bg {
+  background: inline-svg('<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  	 width="707.122px" height="707.125px" viewBox="0 0 707.122 707.125" enable-background="new 0 0 707.122 707.125"
+  	 xml:space="preserve">
+  <g>
+  	<g>
+  		<path fill="' + $icon-color + '" d="M0,0v270.656l436.469,436.468h270.653V436.181L270.99,0H0z M0,707.125h270.802L0,436.324V707.125z
+  			 M436.32,0l270.802,270.805V0H436.32z"/>
+  	</g>
+  </g>
+  </svg>');
+}
+
+
+header {
+  @include filter-gradient(#ffffff, #ffffff, vertical);
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 80%,rgba(255,255,255,0) 100%));
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  #ns-logo {
+    padding: 1rem;
+    // Logo as background image
+    @extend %logo-as-bg;
+    background-size: 5%;
+    // background-color: rgba(#FFF, .8);
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 3rem;
+
+    &:hover {
+      @include transform(rotate(180deg));
+      @include transition(all 0.5s ease);
+    }
+  }
 }
 
 // Photo Credit
@@ -94,14 +240,7 @@ animation:         $animations;
     }
 } $browser: null;
 
-html {
-  background: white;
-  padding: 1rem;
-  font-family: sans-serif;
-}
-
 section {
-  background: white;
   @extend %clearfix;
   max-width: 1024px;
   margin: auto;
