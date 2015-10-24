@@ -1,0 +1,19 @@
+// Contains media query variables for responsive breakpoints
+
+/* Desktop layout */
+  $d-min:  1025px;
+
+/* Tablet landscape */
+  $tl-max: $d-min - 1;  // 1024px
+  $tl-min: 769px;
+
+/* Tablet portrait */
+  $tp-max: $tl-min - 1; // 768 px
+  $tp-min: 481px;
+
+/* Phone landscape */
+  $pl-max: $tp-min - 1; // 480 px
+  $pl-min: 321px;
+
+/* Phone portrait */
+  $pp-max: $pl-min - 1;  // 320 px
