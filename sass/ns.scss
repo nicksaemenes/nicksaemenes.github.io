@@ -1,8 +1,15 @@
 @import 'compass';
 @import 'css-reset';
 
+$earmarks-size: 20px;
+
+$base-font-color: #666;
+
 html {
   @include box-sizing(border-box);
+  color: $base-font-color;
+  font-family: 'Hind', sans-serif;
+  font-weight: 300;
 }
 
 *, *:before, *:after {
@@ -27,16 +34,7 @@ html {
   }
 }
 
-html {
-  color: #666;
-  font-family: 'Hind', sans-serif;
-  font-weight: 300;
-}
-
-$earmarks-size: 20px;
-
 body {
-  // background-color: #333;
   padding-top: 100px;
 
   &:after,
@@ -69,22 +67,31 @@ body {
 }
 
 h1 {
-  color: #333;
+  color: darken($base-font-color, 20%);
   font-weight: 700;
 }
 
 h2 {
-  color: #444;
+  color: darken($base-font-color, 15%);
   font-weight: 600;
 }
 
 h3 {
   color: #555;
+  color: darken($base-font-color, 10%);
   font-weight: 500;
 }
 
 p {
   line-height: 1.8;
+}
+
+a {
+  color: $base-font-color;
+
+  &:hover {
+    opacity: .75;
+  }
 }
 
 
