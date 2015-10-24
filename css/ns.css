@@ -64,7 +64,22 @@ table {
 /* Tablet portrait */
 /* Phone landscape */
 /* Phone portrait */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\000039}}
+@-webkit-viewport {
+  width: device-width;
+}
+@-moz-viewport {
+  width: device-width;
+}
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+@viewport {
+  width: device-width;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000310}}
 html {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -74,19 +89,19 @@ html {
   font-weight: 300;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000316}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000317}}
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000322}}
 section:after, .tweener:after, section .info-block:after {
   content: "";
   display: table;
   clear: both;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000329}}
 section a.box, section:hover > div {
   -moz-transition-property: all;
   -o-transition-property: all;
@@ -101,7 +116,7 @@ section a.box, section:hover > div {
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000334}}
 section a.box:hover, section:hover > div:hover {
   -moz-transition-duration: 0.1s;
   -o-transition-duration: 0.1s;
@@ -109,25 +124,25 @@ section a.box:hover, section:hover > div:hover {
   transition-duration: 0.1s;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000338}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000339}}
 body {
   padding-top: 100px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000342}}
 body:after, body:before {
   width: 0;
   height: 0;
   position: fixed;
   content: "";
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000350}}
 body:after {
   border-bottom: 20px solid black;
   border-right: 20px solid transparent;
   left: 0;
   bottom: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000357}}
 body:before {
   border-top: 20px solid black;
   border-left: 20px solid transparent;
@@ -136,62 +151,62 @@ body:before {
   z-index: 1001;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000366}}
 .headline {
   padding: 2rem;
   text-align: center;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000371}}
 h1, h2, h3, h4, h5, h6, p {
   margin: 1rem 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000374}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000375}}
 h1 {
   color: #333333;
   font-weight: 700;
   font-size: 2rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000381}}
 h2 {
   color: #404040;
   font-weight: 600;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000385}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000386}}
 h3 {
   color: #555;
   color: #4d4d4d;
   font-weight: 500;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000391}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000392}}
 p {
   line-height: 1.8;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000394}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\0000395}}
 p a {
   font-weight: 600;
   text-decoration: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003100}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003101}}
 a {
   color: #666;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003103}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003104}}
 a:hover {
   opacity: .75;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003168}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003169}}
 header #ns-logo {
   background: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22\a%20%20	%20width%3D%22707.122px%22%20height%3D%22707.125px%22%20viewBox%3D%220%200%20707.122%20707.125%22%20enable-background%3D%22new%200%200%20707.122%20707.125%22\a%20%20	%20xml%3Aspace%3D%22preserve%22%3E\a%20%20%3Cg%3E\a%20%20	%3Cg%3E\a%20%20		%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M0%2C0v270.656l436.469%2C436.468h270.653V436.181L270.99%2C0H0z%20M0%2C707.125h270.802L0%2C436.324V707.125z\a%20%20			%20M436.32%2C0l270.802%2C270.805V0H436.32z%22%2F%3E\a%20%20	%3C%2Fg%3E\a%20%20%3C%2Fg%3E\a%20%20%3C%2Fsvg%3E");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003182}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003183}}
 header {
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFFFFF', endColorstr='#FFFFFFFF');
@@ -206,18 +221,18 @@ header {
   width: 100%;
   z-index: 1000;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003192}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003193}}
 header #ns-logo {
   padding: 1rem;
   background-size: 5%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003200}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003201}}
 header img {
   display: block;
   margin: 0 auto;
   max-width: 3rem;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003205}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003206}}
 header img:hover {
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -229,7 +244,7 @@ header img:hover {
   transition: all 0.5s ease;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003213}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003214}}
 li:after {
   background: rgba(0, 0, 0, 0.5);
   color: rgba(255, 255, 255, 0.5);
@@ -245,13 +260,13 @@ li:after {
 animation mixing
 keyframe animation
 @include animation('animation-name .4s 1')*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003261}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003262}}
 section {
   max-width: 1024px;
   margin: auto;
   /* The Holy Grail of CSS Centering - http://webdesign.tutsplus.com/tutorials/the-holy-grail-of-css-centering--cms-22114 */
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003266}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003267}}
 section a.box {
   color: #666;
   text-decoration: none;
@@ -259,58 +274,58 @@ section a.box {
   border: 1px solid;
   float: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003274}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003275}}
 section a.box:hover {
   background: #111;
   border-color: transparent;
   color: white;
   opacity: .75;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003282}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003283}}
 section img {
   width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003286}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003287}}
 section p {
   margin-top: 0;
   text-align: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003291}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003292}}
 section .contained {
   height: 70%;
   margin: auto;
   width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003297}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003298}}
 section .outer {
   display: table;
   height: 100%;
   width: 100%;
   word-spacing: -1rem;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003304}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003305}}
 section .inner {
   display: table-cell;
   vertical-align: middle;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003309}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003310}}
 section .centered {
   display: inline-block;
   float: left;
   position: relative;
   width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003318}}
 section:hover > div {
   opacity: .5;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003322}}
 section:hover > div:hover {
   opacity: 1;
 }
 
 /* The "Tweener" ... My addition to allow for cross-browser support of alternating element alignment of non-css-class-ified elements*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003330}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003331}}
 .tweener {
   direction: ltr;
   display: inline-table;
@@ -320,7 +335,7 @@ section:hover > div:hover {
   vertical-align: middle;
   word-spacing: normal;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003343}}
 .tweener .inner {
   width: 100% !important;
 }
@@ -328,31 +343,31 @@ section:hover > div:hover {
 /*.tweener:nth-of-type(odd) .centered > * {
   @include box-shadow(0 5px 1px -3px rgba(0,0,0,.2));
 }*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003352}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003353}}
 .text-block {
   width: 80%;
   float: right;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003358}}
 section .info-block {
   border-bottom: 1px solid #ccc;
   padding: 4rem 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003362}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003363}}
 section .info-block:last-of-type {
   border: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003367}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003368}}
 section .info-block:nth-child(2n) .outer {
   direction: rtl;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003371}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003372}}
 section .info-block:nth-child(2n) .text-block {
   float: left;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003379}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003380}}
 .video-container {
   height: 0;
   overflow: hidden;
@@ -360,7 +375,7 @@ section .info-block:nth-child(2n) .text-block {
   padding-top: 30px;
   position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003386}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003387}}
 .video-container iframe,
 .video-container object,
 .video-container embed {
@@ -416,7 +431,7 @@ section .info-block:nth-child(2n) .text-block {
     opacity: 0;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003404}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003405}}
 section ul.xfade {
   float: right;
   list-style: none;
@@ -426,7 +441,7 @@ section ul.xfade {
   position: relative;
   width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003413}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003414}}
 section ul.xfade li {
   margin: 0;
   position: absolute;
@@ -434,21 +449,21 @@ section ul.xfade li {
   top: 0;
   width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003421}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003422}}
 section ul.xfade li:nth-child(3) {
   -webkit-animation: xfade 12s 0s infinite;
   -moz-animation: xfade 12s 0s infinite;
   -o-animation: xfade 12s 0s infinite;
   animation: xfade 12s 0s infinite;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003425}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003426}}
 section ul.xfade li:nth-child(2) {
   -webkit-animation: xfade 12s 4s infinite;
   -moz-animation: xfade 12s 4s infinite;
   -o-animation: xfade 12s 4s infinite;
   animation: xfade 12s 4s infinite;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003429}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003430}}
 section ul.xfade li:nth-child(1) {
   -webkit-animation: xfade 12s 8s infinite;
   -moz-animation: xfade 12s 8s infinite;
@@ -456,21 +471,21 @@ section ul.xfade li:nth-child(1) {
   animation: xfade 12s 8s infinite;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003436}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003437}}
 section .info-block:nth-child(3n+2) ul.xfade li:nth-child(3) {
   -webkit-animation: xfade 12s -1s infinite;
   -moz-animation: xfade 12s -1s infinite;
   -o-animation: xfade 12s -1s infinite;
   animation: xfade 12s -1s infinite;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003440}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003441}}
 section .info-block:nth-child(3n+2) ul.xfade li:nth-child(2) {
   -webkit-animation: xfade 12s 3s infinite;
   -moz-animation: xfade 12s 3s infinite;
   -o-animation: xfade 12s 3s infinite;
   animation: xfade 12s 3s infinite;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003444}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003445}}
 section .info-block:nth-child(3n+2) ul.xfade li:nth-child(1) {
   -webkit-animation: xfade 12s 7s infinite;
   -moz-animation: xfade 12s 7s infinite;
@@ -478,21 +493,21 @@ section .info-block:nth-child(3n+2) ul.xfade li:nth-child(1) {
   animation: xfade 12s 7s infinite;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003451}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003452}}
 section .info-block:nth-child(3n+3) ul.xfade li:nth-child(3) {
   -webkit-animation: xfade 12s -2s infinite;
   -moz-animation: xfade 12s -2s infinite;
   -o-animation: xfade 12s -2s infinite;
   animation: xfade 12s -2s infinite;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003455}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003456}}
 section .info-block:nth-child(3n+3) ul.xfade li:nth-child(2) {
   -webkit-animation: xfade 12s 2s infinite;
   -moz-animation: xfade 12s 2s infinite;
   -o-animation: xfade 12s 2s infinite;
   animation: xfade 12s 2s infinite;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003459}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003460}}
 section .info-block:nth-child(3n+3) ul.xfade li:nth-child(1) {
   -webkit-animation: xfade 12s 6s infinite;
   -moz-animation: xfade 12s 6s infinite;
@@ -504,13 +519,13 @@ section .info-block:nth-child(3n+3) ul.xfade li:nth-child(1) {
  *   Media Queries
  * ========================================================================== */
 @media only screen and (min-width: 679px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003469}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003470}}
   section {
     margin: auto;
     padding: 0 2rem;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003474}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003475}}
   .tweener {
     height: 100%;
     vertical-align: middle;
@@ -518,28 +533,28 @@ section .info-block:nth-child(3n+3) ul.xfade li:nth-child(1) {
   }
 }
 @media only screen and (max-width: 678px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003483}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003484}}
   section .info-block {
     border-bottom: none;
     padding: 0 0 6rem 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003488}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003489}}
   section a.box {
     float: none;
     display: block;
     text-align: center;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003495}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003496}}
   .tweener {
     float: left;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003498}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003499}}
   .tweener:first-of-type {
     margin-bottom: 4rem;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003503}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/nicksaemenes\.github\.io\/sass\/ns\.scss}line{font-family:\00003504}}
   .text-block {
     float: none !important;
     margin: auto;
