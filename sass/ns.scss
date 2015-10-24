@@ -66,6 +66,10 @@ body {
   text-align: center;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+  margin: 1rem 0;
+}
+
 h1 {
   color: darken($base-font-color, 20%);
   font-weight: 700;
@@ -84,6 +88,11 @@ h3 {
 
 p {
   line-height: 1.8;
+
+  a {
+    font-weight: 600;
+    text-decoration: none;
+  }
 }
 
 a {
@@ -252,7 +261,7 @@ section {
   max-width: 1024px;
   margin: auto;
 
-  a {
+  a.box {
     color: #666;
     text-decoration: none;
     padding: 1rem;
