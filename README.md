@@ -1,8 +1,9 @@
 # nicksaemenes.github.io
 
-This is my webpage.
-I began my design career as primarily a print designer, but have transitioned into the world of the www.
+You found my webpage.
 
-My portfolio is a PDF, but I have collected some of my favorite web techniques, I have collected over the years, on this page, both to show what I have found, but also that I can combine these techniques to create a functional page.
+I began my design career in the world of CMYK, transitioned into the world of the RGB, and have most recently moved to a position that utilizes both color build methods evenly.
 
-Photo credits go to my bro-in-law Nick Anderson. 
+My portfolio is currently a PDF, but I have collected some of my favorite web techniques (below) to chronicle some of the solutions I utilized over the years.
+
+Photo credits go to my bro-in-law Nick Anderson.
