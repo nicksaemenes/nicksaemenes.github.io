@@ -64,12 +64,12 @@ body {
 
   #ns-logo img {
     @include transform(rotate(180deg));
-    @include transition(all 0.5s ease);
+    @include transition(all 0.5s cubic-bezier(.39,1.93,.31,.69));
   }
 
   &:hover #ns-logo img {
     @include transform(rotate(0deg));
-    @include transition(all 0.5s ease);
+    @include transition(all 0.5s cubic-bezier(.39,1.93,.31,.69));
   }
 }
 
